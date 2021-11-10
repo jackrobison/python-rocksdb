@@ -6,6 +6,7 @@ on:
   push:
     branches:
       - master
+      - jack-testing
 jobs:
   manylinux:
     runs-on: ubuntu-latest
@@ -25,7 +26,7 @@ jobs:
             src/rocksdb/libz.a
             src/rocksdb/librocksdb.a
       - name: Install requirements
-        run: sudo apt-get install build-essential binutils cmake
+        run: sudo apt-get install build-essential binutils cmake python3-cffi
       - name: Make static library files
         run: make clean && make
       - name: Build wheels

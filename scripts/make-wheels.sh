@@ -1,6 +1,6 @@
 set -ex
 
-apt install -y binutils
+apt install -y binutils python3-cffi
 
 cd lbry-rocksdb
 mkdir -p dist
